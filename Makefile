@@ -31,7 +31,7 @@ parser_all: $(DATA_NAME_0)
 	$(DONE)
 
 $(DATA_NAME_0):
-	-@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@
+	@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@
 	$(DONE)
 
 setup: install
