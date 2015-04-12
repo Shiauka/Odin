@@ -31,11 +31,11 @@ parser_all: $(DATA_NAME_0)
 	$(DONE)
 
 $(DATA_NAME_0):
-	@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@
+	-@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@ $(ANALYSIS)
 	$(DONE)
 
 setup: install
-	@mkdir -p $(DATA) $(DATA_NAME)
+	@mkdir -p $(DATA) $(DATA_NAME) $(ANALYSIS)
 	$(DONE)
 
 install: 
@@ -45,5 +45,5 @@ install:
 	$(DONE)
 
 clean:
-	@rm -rf $(BIN)
+	@rm -rf $(BIN) $(DATA)
 	$(DONE)
