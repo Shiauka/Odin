@@ -16,9 +16,7 @@ elif [ "$mode" = "dividend_all" ]; then
 	sh $bin/parsingTWYahoo.sh $code 1 $bin $output $analysis
 	done
 elif [ "$mode" = "price_all" ]; then
-	cat "$codelist" | while read code; do
-	sh $bin/parsingTWSE.sh $code 120 $bin $output $analysis
-	done
+	sh $bin/parsingTWSE.sh 4000 $bin $output $analysis ALLBUT0999
 else
 	echo "$mode is not implement"
 fi
