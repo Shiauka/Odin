@@ -31,7 +31,7 @@ parser_all: $(DATA_NAME_0)
 	$(DONE)
 
 $(DATA_NAME_0):
-	-@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@ $(ANALYSIS) codelist.test
+	-@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@ $(ANALYSIS) codelist.full
 	$(DONE)
 
 setup: install
