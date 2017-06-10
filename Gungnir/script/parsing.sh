@@ -16,7 +16,7 @@ elif [ "$mode" = "dividend_all" ]; then
 	sh $bin/parsingTWYahoo.sh $code 1 $bin $output $analysis
 	done
 elif [ "$mode" = "price_all" ]; then
-	sh $bin/parsingTWSE.sh 4000 $bin $output $analysis ALLBUT0999
+	sh $bin/parsingTWSE.sh 10 $bin $output $analysis ALLBUT0999
 else
 	echo "$mode is not implement"
 fi
