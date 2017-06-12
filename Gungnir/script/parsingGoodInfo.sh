@@ -20,11 +20,6 @@ fi
 
 ./bin/html2xml $temp_html $temp_xml
 ./bin/xmlparser $xml_mode $temp_xml $output_csv
-
-#if [ "$mode" -eq 1 ];then
-#./bin/cvs2sk 1 $code $output_cvs "$output_sk".dividend
-#elif [ "$mode" -eq 2 ];then
-#./bin/cvs2sk 2 $code $output_cvs "$output_sk".earning.month "$output_sk".earning.season
-#fi
+./bin/cvs2sk 4 $code $output_csv "$output_sk".fingrade
 
 rm $temp_xml $temp_html
