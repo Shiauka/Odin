@@ -13,7 +13,7 @@ PROJECT=[Odin]
 DONE=@echo "$(PROJECT) $@ done"
 
 
-DATA_NAME_0=dividend earning price
+DATA_NAME_0=dividend earning price fingrade
 DATA_NAME=$(foreach file, $(DATA_NAME_0), $(DATA)/$(file))
 
 #================================
@@ -31,7 +31,7 @@ parser_all: $(DATA_NAME_0)
 	$(DONE)
 
 $(DATA_NAME_0):
-	-@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@ $(ANALYSIS) codelist/codelist.full
+	-@sh $(BIN)/parsing.sh "$@_all" $(BIN) $(DATA)/$@ $(ANALYSIS) codelist/codelist.test
 	$(DONE)
 
 setup: install
@@ -45,5 +45,5 @@ install:
 	$(DONE)
 
 clean:
-	@rm -rf $(BIN) $(DATA)
+	@rm -rf $(BIN)
 	$(DONE)

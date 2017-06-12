@@ -15,6 +15,10 @@ elif [ "$mode" = "dividend_all" ]; then
 	cat "$codelist" | while read code; do
 	sh $bin/parsingTWYahoo.sh $code 1 $bin $output $analysis
 	done
+elif [ "$mode" = "fingrade_all" ]; then
+        cat "$codelist" | while read code; do
+        sh $bin/parsingGoodInfo.sh $code 1 $bin $output $analysis
+        done
 elif [ "$mode" = "price_all" ]; then
 	sh $bin/parsingTWSE.sh 10 $bin $output $analysis ALLBUT0999
 else
