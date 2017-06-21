@@ -13,7 +13,7 @@ PROJECT=[Odin]
 DONE=@echo "$(PROJECT) $@ done"
 
 
-DATA_NAME_0=dividend earning price fingrade
+DATA_NAME_0=dividend earning price mops
 DATA_NAME=$(foreach file, $(DATA_NAME_0), $(DATA)/$(file))
 
 #================================

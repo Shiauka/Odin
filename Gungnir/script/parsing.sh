@@ -18,9 +18,15 @@ elif [ "$mode" = "dividend_all" ]; then
 elif [ "$mode" = "fingrade_all" ]; then
         cat "$codelist" | while read code; do
         sh $bin/parsingGoodInfo.sh $code 1 $bin $output $analysis
+	sleep 15 #for goodinfo website limit
         done
 elif [ "$mode" = "price_all" ]; then
 	sh $bin/parsingTWSE.sh 10 $bin $output $analysis ALLBUT0999
+elif [ "$mode" = "mops_all" ]; then
+        cat "$codelist" | while read code; do
+        sh $bin/parsingMops.sh $code 1 $bin $output $analysis
+	sleep 4
+        done
 else
 	echo "$mode is not implement"
 fi
